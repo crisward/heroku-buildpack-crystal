@@ -66,13 +66,8 @@ start "Installing Dependencies"
   crystal deps --production
 finished
 
-if [ -f app.cr ]; then
-  start "Compiling app.cr (using old behaviour, app.cr exists - ignoring shard.yml)"
-    crystal build app.cr --release
-  finished
-else
-  eval $(parse_yaml shard.yml "shard_")
-  start "Compiling src/${shard_name}.cr (auto-detected from shard.yml)"
-    crystal build src/${shard_name}.cr --release -o app
+if [ -f sentry.cr ]; then
+  start "Compiling sentry.cr to watch app during development"
+    crystal build sentry.cr
   finished
 fi
