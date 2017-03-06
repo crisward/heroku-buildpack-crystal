@@ -69,6 +69,6 @@ finished
 if [ -f sentry.cr ]; then
   start "Compiling app.cr (using old behaviour, app.cr exists - ignoring shard.yml)"
     ${CRYSTAL_DIR}/bin/crystal build sentry.cr
-    PATH="${PATH}:/.heroku/crystal/bin"
+    PATH="${PATH}:/app/.heroku/crystal/bin"
   finished
 fi
