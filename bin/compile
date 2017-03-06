@@ -66,7 +66,7 @@ start "Installing Dependencies"
   crystal deps --production
 finished
 
-if [ -f app.cr ]; then
+if [ -f sentry.cr ]; then
   start "Compiling app.cr (using old behaviour, app.cr exists - ignoring shard.yml)"
     crystal build sentry.cr
     chmod +x sentry
