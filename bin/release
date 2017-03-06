@@ -4,5 +4,5 @@ cat << EOF
 ---
 addons:
 default_process_types:
-  web: ./sentry -w "./src/**/*.cr" -w "./src/**/*.ecr" -w "./src/**/*.slang"
+  web: ./sentry -w ./src/**/*.cr -w ./src/**/*.ecr -w ./src/**/*.slang --port \$PORT
 EOF
