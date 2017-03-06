@@ -69,5 +69,6 @@ finished
 if [ -f app.cr ]; then
   start "Compiling app.cr (using old behaviour, app.cr exists - ignoring shard.yml)"
     crystal build sentry.cr
+    chmod +x sentry
   finished
 fi
