@@ -4,5 +4,5 @@ cat << EOF
 ---
 addons:
 default_process_types:
-  web: ./app --port \$PORT
+  web: ./sentry -w "./src/**/*.cr" -w "./src/**/*.ecr" -w "./src/**/*.slang"
 EOF
