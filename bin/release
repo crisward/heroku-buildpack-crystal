@@ -4,5 +4,5 @@ cat << EOF
 ---
 addons:
 default_process_types:
-  web: /.heroku/crystal/bin/crystal ./sentry.cr
+  web: /app/.heroku/crystal/bin/crystal ./sentry.cr
 EOF
