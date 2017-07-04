@@ -57,7 +57,7 @@ start "Installing Crystal ($CRYSTAL_VERSION $CRYSTAL_VERSION_REASON) to $CRYSTAL
   ${CURL} https://www.duodesign.co.uk/downloads/crystal-0.23.0-cedar-14.tar.gz | tar xz -C $CRYSTAL_DIR --strip-component=1
   mkdir -p /tmp/crystal/embedded/lib/
   ${CURL} https://www.duodesign.co.uk/downloads/libgc.a > /tmp/crystal/embedded/lib/libgc.a
-  ${CURL} https://www.duodesign.co.uk/downloads/libllvm-4.0.so.1 > /tmp/crystal/embedded/lib/libllvm-4.0.so.1
+  ${CURL} https://www.duodesign.co.uk/downloads/libllvm-4.0.so.1 > /tmp/crystal/embedded/lib/libLLVM-4.0.so.1
 finished
 export PATH="${PATH}:${CRYSTAL_DIR}/bin"
 
