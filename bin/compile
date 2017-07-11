@@ -55,7 +55,7 @@ unset GIT_DIR
 mkdir -p $CRYSTAL_DIR
 start "Installing Crystal ($CRYSTAL_VERSION $CRYSTAL_VERSION_REASON) to $CRYSTAL_DIR"
   ${CURL} https://www.dropbox.com/s/5p0zogk8basxcs8/crystal_0.23.1-1_amd64.deb?dl=0 -O crystal_0.23.1-1_amd64.deb
-  dpkg -i crystal_0.23.1-1_amd64.deb
+  sudo dpkg -i crystal_0.23.1-1_amd64.deb
 finished
 export PATH="${PATH}:${CRYSTAL_DIR}/bin"
 export LD_LIBRARY_PATH=/tmp/crystal/embedded/lib
