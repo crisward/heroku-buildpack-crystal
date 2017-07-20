@@ -63,7 +63,7 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 cd $BUILD_DIR
 
 start "Installing Dependencies"
-  crystal deps --production
+  crystal deps update --production
 finished
 
 if [ -f app.cr ]; then
