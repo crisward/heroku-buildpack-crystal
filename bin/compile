@@ -48,7 +48,7 @@ else
 fi
 
 CRYSTAL_URL=`${CURL} https://api.github.com/repos/crystal-lang/crystal/releases/tags/${CRYSTAL_VERSION} | grep 'https://github.com/crystal-lang/crystal/releases/download/.*-linux-x86_64.tar.gz' | sed 's/.*: "\(.*\)"/\1/'`
-CRYSTAL_DIR=/tmp/crystal
+CRYSTAL_DIR=$BUILD_DIR/.heroku/crystal
 unset GIT_DIR
 
 # Install Crystal
