@@ -62,7 +62,7 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 cd $BUILD_DIR
 
 start "Installing Dependencies"
-  crystal deps --production
+  crystal deps update
 finished
 
 if [ -f sentry.cr ]; then
